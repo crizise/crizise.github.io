@@ -1,0 +1,69 @@
+
+body{
+	background-color: #FFF5E8;
+	font-family: 'BenchNine', sans-serif;
+}
+hr{
+	border-top: 1px solid #805015;
+}
+.navbar{
+	border: 1px solid #D4A56A;
+	box-shadow: 1px 1px 3px #552F00;
+}
+.logo{
+	color: #552F00;
+	font-family: 'Sansita One', cursive;
+	font-size: 2.2em;
+}
+.logo:hover{
+	text-decoration: none;
+	color:#805015;
+}
+.heading{
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 3.0em;
+}
+.bg{
+	background-color: #ffd9aa;
+}
+.bg1{
+	background-color: #FFE8CC;
+}
+/*Here I gave some color to the button*/
+.button-background{
+	background-color: #552F00;
+}
+/*Selecctors founded in chrome web inspector*/
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: #805015;
+}
+.nav-list-item{
+	font-size: 2.0em;
+}
+.menu-item{
+	width: 100%;
+	margin: 25px auto;
+	height: auto;
+	background-color: #ffd9aa;
+	border: 1px solid #D4A56A;
+	border-radius: 2px;
+	box-shadow: 1px 1px 3px #552F00;
+}
+.sub-heading{
+	font-size: 3em;
+}
+.description{
+	font-size: 1.5em;
+	padding: 15px 25px;
+	text-align: justify;
+}
+.description a{
+	color: #552F00;
+	padding: 0 5px;
+	font-weight: 600;
+}
+.description a:hover{
+	text-decoration: none;
+	color: #805015;
+}
