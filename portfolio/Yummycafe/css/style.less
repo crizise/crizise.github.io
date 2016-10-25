@@ -1,0 +1,345 @@
+@import "fonts";
+@import "colors";
+@import "font-awesome.min.css";
+html{
+	
+}
+body{
+	font-family: 'OpenSans-Regular', sans-serif;
+	color: @text-paragraph;	
+	background-color: #ffffff;
+}
+header{
+	background-color:@header-background;
+	position: relative;
+	.wrap-bottom{
+		margin-bottom: -20px;
+		height:12.5px;
+		background: url(../img/slicer.png)  repeat;
+		background-size: 50% 25px;
+		
+	}
+}
+.navbar{
+	margin-bottom: 0;
+	min-height:60px;
+	&-default{
+		background-color: transparent;
+		border: 0;
+		& .navbar-nav>li>a{
+			font-family: 'OpenSans-Semibold';
+			color: @header-links;
+			text-transform: capitalize;
+			font-size: 1.1428em;
+			z-index:1000;
+			&:hover{
+				color:@header-links-hover;
+			}
+		}
+	}
+}
+.jumbotron{
+	margin-bottom: 0;
+	padding-top: 140px;
+	padding-bottom: 140px;
+	position: relative;
+	background-color: @header-background;
+	z-index: 25;
+	img{
+		position: absolute;
+		width: 100%;
+		z-index: 100;
+	}
+	h1, p{
+		margin: 0;
+		
+	}
+	h1{	
+		font-family: 'PassionOne-Regular';
+		font-size: 10em;
+		line-height:0.5;
+		z-index: 1000;
+		text-transform:uppercase;
+			color: @title-name-second;
+		span{
+			color: @title-name-first;
+			line-height:0.7;
+			z-index: -1000;	
+		}
+	}
+	p{
+		font-family: 'OpenSans-Semibold';
+		font-size: 1.4285em;
+		line-height:0.8;
+		&:first-child{
+			text-transform: uppercase;
+		}
+		span{
+			color: @title-name-second;
+		}
+	}
+	h3{
+		font-family: 'OpenSans-ExtraBold';
+		font-size: 3.9014em;
+		color: @title-name-second;
+		span{
+			margin-left: 30px;
+			font-family: 'OpenSans-Light';
+			font-size: 0.608em;
+		}
+	}
+	.special-big{
+		position: absolute;
+		top: 10%;
+		left: 38%;
+		font-family: 'PassionOne-Regular';
+		font-size: 24.4485em;
+		opacity: 0.2;
+		z-index: -25;
+	}	
+}
+main{
+	margin: 60px 0;
+	overflow: hidden;
+	h1{
+	margin: 40px 0 20px 15px;
+	text-align: center;
+	font-family: 'PassionOne-Regular';
+	font-size: 2.5714em;
+	text-transform:uppercase;
+	color: @text-head-second;
+	span{
+		color: @text-head-first;
+		}
+	}
+	p{
+		font-size:1.1428em;
+	}
+	.orange-it{
+		margin: 20px 0;
+		font-family: 'OpenSans-Bold';
+		color: @text-head-second;
+	}
+	ul.social-buttons{
+		margin: 30px 0;
+		padding-left: 0;
+		li{
+		display: inline-block;
+		margin-right: 10px;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+		text-align: center;
+		line-height: 50px;
+		background: @text-button-optional;
+		&:hover a{
+				color:  @text-head-second;
+			}
+		a{
+			color: @text-head-first;
+			}
+			
+		}
+	}
+	.slide-about-picture{
+		margin: 0 auto;
+		width: 90%;
+		min-height: 285px ;/*285px coef 0.8*/
+		background: url('../img/about-photo-1.png') center no-repeat;
+		background-size: cover;
+		border-radius: 2px;
+	}
+	ul.slide-about-control{
+		li{
+			content: "";
+			display: inline-block;
+			list-style: none;
+			margin: 10px 11px;
+			width: 70px;
+			height: 10px;
+			background-color: @text-button-optional;
+			border-radius: 2px;
+			&:hover{
+				background-color: @text-head-second;
+			}
+		}
+	}
+	.slide-about-text{
+			color: gray;
+		}
+	.burger-offer{
+		position: relative;
+		padding: 0 50px;
+		margin-bottom: 30px;
+		text-align: justify;
+		/*background-color: rgba( 255, 0, 0, 0.5);*/
+		.plate{
+			position: absolute;
+			left: 50%;
+			top: 45%;
+			transform: translate( -50%, -50%);
+			display: block;
+			width: 80%;
+			height: 70px;
+			background-color: @text-head-second;
+			z-index: -10;
+		}
+		img{
+			display: block;
+			margin: 0 auto;
+			width:80%;
+			height: 80%;
+			z-index: 10;
+		}
+		h2{
+			display:inline-block;
+			padding-right: 17%;
+
+			margin: 0;
+			color: @text-head-first;
+			font-family: 'PassionOne-Regular';
+			text-transform: uppercase;
+			border-bottom: 3px solid @text-head-first;
+			&.bulbus{
+				padding-right: 35%;
+			}
+
+		}
+		span{
+				font-family:'PassionOne-Regular';
+				font-size: 30px;
+				border-bottom: 3px solid @text-head-second;
+				color: @text-head-second;
+			}
+		p{	
+			text-align: left;
+			margin-bottom: 0;
+			&.inline{
+				max-width:75%;
+				float:left;
+			}
+			&.last{
+				text-align: right;
+				font-family: 'OpenSans-Bold';
+				font-size: 16px;
+				margin: 20px 10px;
+			}
+		}
+	}
+
+	.carousel-control{
+		position: static;
+		padding:;
+		color: @text-head-second;
+		&.right{
+			background-image: none;
+			padding-left: 40px;
+		}
+		&.left{
+			background-image: none;
+		}
+	}
+	.fa{
+		font-size: 24px;
+	}
+	.bg{
+		background-color: rgba(255, 50, 0, 0.5);
+	}
+	.carousel-indicators{
+		margin-left: 0;
+	} 
+	.carusel-testimonials{
+		margin-top: 30px;
+		
+		img{
+			width: 100%;
+			height: 700px;
+		}
+	}/*neet to refactoring in morning*/
+	.testimonials{
+		margin-top: 50px;
+		padding: 130px 20px;
+		width: 100%;
+		height: 600px;
+		background: url('../img/burgergirl.png') center no-repeat;
+		background-size: cover;
+		font-family: 'PassionOne-Regular';
+		color: @title-name-second;
+		&-two{
+			margin-top: 50px;
+			padding: 130px 20px;
+			width: 100%;
+			height: 600px;
+			background: url('../img/burgerman.png') center no-repeat;
+			background-size: cover;
+			font-family: 'PassionOne-Regular';
+			color: @title-name-second;
+			h5{
+				display: inline-block;
+				font-size: 1.5714em;
+				padding: 10px 25px;
+				background-color: @text-head-second;
+			}
+			h2{
+				
+				font-size: 3.5714em;
+			}
+			p{
+				display: inline-block;
+				text-align: right;
+				border-top: 3px solid @text-head-second;
+			}
+		}
+		&-three{
+			margin-top: 50px;
+			padding: 130px 20px;
+			width: 100%;
+			height: 600px;
+			background: url('../img/burgerburger.png') center no-repeat;
+			background-size: cover;
+			font-family: 'PassionOne-Regular';
+			color: @title-name-second;
+			h5{
+			display: inline-block;
+			font-size: 1.5714em;
+			padding: 10px 25px;
+			background-color: @text-head-second;
+			}
+			h2{
+				font-size: 3.5714em;
+			}
+			p{
+				display: inline-block;
+				text-align: right;
+				border-top: 3px solid @text-head-second;
+			}
+		}
+		h5{
+			display: inline-block;
+			font-size: 1.5714em;
+			padding: 10px 25px;
+			background-color: @text-head-second;
+		}
+		h2{
+			
+			font-size: 3.5714em;
+		}
+		p{
+			display: inline-block;
+			text-align: right;
+			border-top: 3px solid @text-head-second;
+		}
+	}
+}
+@media (min-width: 320px) and (max-width: 900px) {
+	.jumbotron{ 
+		padding: 50px 0;
+		& img{
+			position: relative;
+			padding: 0 40px;
+		}
+		& h1{
+			font-size:5.5em;
+		}
+	}
+}
