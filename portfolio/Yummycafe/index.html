@@ -326,7 +326,13 @@
 				</div>
 			</div> -->
 		</div>
-		<div class="embed-container maps"><iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d907.5795309484539!2d36.168338156927334!3d49.95480855254896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41279f87b2fedb7d%3A0x6febe72cca5a8750!2z0J_Qu9C-0LTQvtCy0LjQuSDQsifRl9C30LQsINCl0LDRgNC60ZbQsiwg0KXQsNGA0LrRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2s!4v1465379655469" allowfullscreen=""></iframe></div>
+		<div class="embed-container maps">
+			<iframe id="iframe"
+				frameborder="0" style="border:0"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA8rNVtGyhYwBzXaq_Tz8WzY0mTfkQ17gs
+				&q=Space+Needle,Seattle+WA" allowfullscreen>
+			</iframe>
+		</div>
 	</main>
 	<footer>
 		<div class="container">
@@ -360,23 +366,23 @@
 		//start map script
 		$(document).ready(function(){
 		var onMapMouseleaveHandler = function (event) {
-    var that = $(this);
-    that.on('click', onMapClickHandler);
-    that.off('mouseleave', onMapMouseleaveHandler);
-    that.find('iframe').css("pointer-events", "none");
-  }
-var onMapClickHandler = function (event) {
-var that = $(this);
+		var that = $(this);
+		that.on('click', onMapClickHandler);
+		that.off('mouseleave', onMapMouseleaveHandler);
+		that.find('iframe').css("pointer-events", "none");
+  		}
+		var onMapClickHandler = function (event) {
+		var that = $(this);
 
-// Disable the click handler until the user leaves the map area
-that.off('click', onMapClickHandler);
+		// Disable the click handler until the user leaves the map area
+		that.off('click', onMapClickHandler);
 
 // Enable scrolling zoom
-that.find('iframe').css("pointer-events", "auto");
+		that.find('#iframe').css("pointer-events", "auto").;
 
 // Handle the mouse leave event
-that.on('mouseleave', onMapMouseleaveHandler);
-}
+	that.on('mouseleave', onMapMouseleaveHandler);
+		}
 
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.maps.embed-container').on('click', onMapClickHandler);
