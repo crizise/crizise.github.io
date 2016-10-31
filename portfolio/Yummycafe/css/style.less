@@ -158,6 +158,8 @@ main{
 	}
 	.carousel-inner>.item>img{
 		max-height: 280px;
+	    margin: 0px auto;
+
 	}
 	.burger-offer{
 		position: relative;
@@ -239,7 +241,7 @@ main{
 	.carousel-indicators{
 		margin-left: 0;
 		li{
-		border: 1px solid gray;
+		border: 1px solid @text-button-optional;
 		}
 		& .active{
 			background-color: @text-head-second;
@@ -349,7 +351,7 @@ main{
 		}
 	}
 	.ingredients{
-		background-color: rgba(255,255,0, 0.2);
+		background-color: rgba(255,255,0, 0.7);
 		position: relative;
 		min-height: 400px;
 		background: url('../img/godzilla.png') center no-repeat;
@@ -417,6 +419,10 @@ main{
 			left: 100px;
 			max-width: 20%;
 			z-index: 11;
+			img{
+				width: 200px;
+				max-height: auto;
+			}
 			&:before{
 				content:"";
 				display: block;
@@ -433,6 +439,10 @@ main{
 			right: 5%;
 			max-width: 20%;
 			z-index: 11;
+			img{
+				width: 200px;
+				max-height: auto;
+			}
 			& p:after{
 				content:"";
 				display:block;
@@ -477,14 +487,25 @@ main{
 		}
 	}
 }
-.maps{
-	margin-top: 50px;
+.adress{
 	position: relative;
+	margin-top: 50px;
+	height: 300px;
+	&-form{
+		position:absolute;
+		left: 5%;
+		top: 10%;
+		width: 33.3%;
+		height: 80%;
+		background-color: @footer-background;
+		z-index: 11;
+	}	
 }
-iframe{
+#map{
+	position: absolute;
 	width: 100%;
-	height: 250px;
-	bottom: 0;
+	height: 100%;
+	z-index: 10;
 }
 footer{
 	min-height: 50px;

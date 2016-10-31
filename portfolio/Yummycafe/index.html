@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<header>
@@ -17,7 +18,7 @@
 				<a href="#" class="navbar-brand">
 					<img src="img/logo-brand.png" alt="Yummy cafe">
 				</a>
-				<button type="button" class="navbar-toggle collapsed button-background" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+				<button id="navbarToogle" type="button" class="navbar-toggle collapsed button-background" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
@@ -69,7 +70,7 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-6">
-					<div id="carouselAbout" class="carousel carousel-about slide" data-ride="carousel">
+					<div id="carouselAbout" class="carousel carousel-about slide" data-ride="carousel" data-interval="false">
 						<ol class="carousel-indicators">
 							<li data-target="#carouselAbout" data-slide-to="0" class="active"></li>
 							<li data-target="#carouselAbout" data-slide-to="1"></li>
@@ -188,7 +189,7 @@
 			</div>
 		</div>
 		<h1 id="customers"><span>Our</span> customers</h1>
-		<div class="container-fluid">
+		<div class="container">
 		<div id="carouselTestimonials" class="carousel carusel-testimonials slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carouselTestimonials" data-slide-to="0" class="active"></li>
@@ -257,9 +258,9 @@
 								<p>Eaque deleniti officiis incidunt dignissimos corporis quam corrupti fugiat, aperiam, magni voluptate, itaque?</p>
 								<img src="img/salad.png" alt="salad">
 							</div>
-							<div id="clicker-meat" class=" clicker clicker-meat text-center">x</div>
-							<div id="clicker-bun" class=" clicker clicker-bun text-center">x</div>
-							<div class="clicker clicker-salad text-center">x</div>
+							<div id="clickerMeat" class="clicker clicker-meat text-center">x</div>
+							<div id="clickerBun" class="clicker clicker-bun text-center">x</div>
+							<div id="clickerSalad" class="clicker clicker-salad text-center">x</div>
 						</div>
 					</div>
 				</div>
@@ -311,14 +312,11 @@
 			</div>
 		</div>
 		</div>
-		<div class="embed-container maps" id="adress">
-			<iframe id="iframe"
-				frameborder="0" style="border:0"
-				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA8rNVtGyhYwBzXaq_Tz8WzY0mTfkQ17gs
-				&q=Space+Needle,Seattle+WA" allowfullscreen>
-			</iframe>
-		</div>
 	</main>
+	<div id="adress" class="adress">
+		<div class="adress-form"></div>
+		<div id="map"></div>
+	</div>
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -331,48 +329,8 @@
 			</div>
 		</div>
 	</footer>
-	<script type="text/javascript">
-		//script for burger-carusel
-		$('.carusel-burger .item').each(function(){
-		  var next = $(this).next();
-		  if (!next.length) {
-		    next = $(this).siblings(':first');
-		  }
-		  next.children(':first-child').clone().appendTo($(this));
-		  
-		  if (next.next().length>0) {
-		    next.next().children(':first-child').clone().appendTo($(this));
-		  }
-		  else {
-		  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-		  }
-		});
-		//end of burger carusel
-		//start map script
-		$(document).ready(function(){
-		var onMapMouseleaveHandler = function (event) {
-		var that = $(this);
-		that.on('click', onMapClickHandler);
-		that.off('mouseleave', onMapMouseleaveHandler);
-		that.find('iframe').css("pointer-events", "none");
-  		}
-		var onMapClickHandler = function (event) {
-		var that = $(this);
-
-		// Disable the click handler until the user leaves the map area
-		that.off('click', onMapClickHandler);
-
-// Enable scrolling zoom
-	that.find('#iframe').css("pointer-events", "auto");
-
-// Handle the mouse leave event
-that.on('mouseleave', onMapMouseleaveHandler);
-}
-
-// Enable map zooming with mouse scroll when the user clicks the map
-$('.maps.embed-container').on('click', onMapClickHandler);
-		});
-		
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY9T0I5jj5xZAIrconZbneFYt4SsAc5cw&callback=initMap">
 	</script>
 </body>
 </html>
