@@ -141,32 +141,24 @@ main{
 			
 		}
 	}
-	.slide-about-picture{
-		margin: 0 auto;
-		width: 90%;
-		min-height: 285px ;/*285px coef 0.8*/
-		background: url('../img/about-photo-1.png') center no-repeat;
-		background-size: cover;
-		border-radius: 2px;
-	}
-	ul.slide-about-control{
+	.carousel-about>.carousel-indicators{
+		position: absolute;
+		bottom: -50px;
+		left: 50%;
+		transform: translate(-50%, 0%);
 		li{
-			content: "";
-			display: inline-block;
-			list-style: none;
-			margin: 10px 11px;
 			width: 70px;
-			height: 10px;
-			background-color: @text-button-optional;
-			border-radius: 2px;
-			&:hover{
-				background-color: @text-head-second;
+			height: 8px;
+			margin-right: 10px;
+			border-radius:5px;
+			&:last-child{
+				margin-right: 0;
 			}
 		}
 	}
-	.slide-about-text{
-			color: gray;
-		}
+	.carousel-inner>.item>img{
+		max-height: 280px;
+	}
 	.burger-offer{
 		position: relative;
 		padding: 0 50px;
@@ -193,7 +185,7 @@ main{
 		}
 		h2{
 			display:inline-block;
-			padding-right: 17%;
+			padding-right: 10%;
 
 			margin: 0;
 			color: @text-head-first;
@@ -247,7 +239,7 @@ main{
 	.carousel-indicators{
 		margin-left: 0;
 		li{
-		border: 1px solid @text-button-optional;
+		border: 1px solid gray;
 		}
 		& .active{
 			background-color: @text-head-second;
@@ -485,6 +477,15 @@ main{
 		}
 	}
 }
+.maps{
+	margin-top: 50px;
+	position: relative;
+}
+iframe{
+	width: 100%;
+	height: 250px;
+	bottom: 0;
+}
 footer{
 	min-height: 50px;
 	font-size: 16px;
@@ -504,15 +505,7 @@ footer{
 		}
 	}
 }
-.maps{
-	margin-top: 30px;
-	position: relative;
-}
-iframe{
-	width: 100%;
-	height: 300px;
-	bottom: 0;
-}
+
 @media (min-width: 320px) and (max-width: 920px) {
 	.jumbotron{ 
 		padding: 50px 0;
