@@ -5,15 +5,22 @@ $(function (){
 	var slow = "'slow', 'swing'";
 	var fast = "'fast', 'swing'";
 	var orange = "'background-color', '#FFA726'";
-	
+	$('.ingredients').click(function() {
+		$('#cliker').css('background-color', '#FFA726');
+		console.log('sda')
+	});
+
 	$('#clickerMeat').bind('click', function() {
+
 		$('.ingredients-meat').toggle(slow, function() {
 			$('.clicker-meat').css('background-color', 'red');
 		});
+
 		$('.ingredients-bun').hide(fast);
 		$('.ingredients-salad').hide(fast);
 		$('.clicker-bun').css('background-color', '#FFA726');
 		$('.clicker-salad').css('background-color', '#FFA726');
+		
 	});
 	$('#clickerBun').bind('click', function() {
 		$('.ingredients-bun').toggle(slow, function() {
@@ -80,18 +87,20 @@ function initMap() {
 		},
 		{
 			featureType: 'water',
-			stylers: [{color: '#FFA726'}]
+			stylers: [{color: '#60CDA7'}]
 		}
 	], {
 		name: 'Custom Style'
 		});
 	var customMapTypeId = 'custom_style';
 
-	var myLatLng = {lat: 36.846, lng: -76.28664};
+	var centerLatLng = {lat: 36.847, lng: -76.297};
+	var markerLatLng = {lat: 36.846, lng: -76.28664};
+
 	
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
-		center: myLatLng,
+		center: centerLatLng,
 		disableDefaultUI: true,//remove UI
 		scrollwheel: false,// temporary fix
 		mapTypeControlOptions: {
@@ -102,7 +111,7 @@ function initMap() {
 	//add marker, need more in future
 	var image = 'img/marker.png';
 	var marker = new google.maps.Marker({
-		position: myLatLng,
+		position: markerLatLng,
 		map: map,
 		icon: image
 	});

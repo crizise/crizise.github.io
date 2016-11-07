@@ -222,7 +222,6 @@ main{
 	}
 	.carousel-control{
 		position: static;
-		padding:;
 		color: @text-head-second;
 		&.right{
 			background-image: none;
@@ -490,13 +489,78 @@ main{
 .adress{
 	position: relative;
 	margin-top: 50px;
-	height: 300px;
+	height: 400px;
+	ul.social-buttons{
+		margin: 0px 50px;
+		li{
+		display: inline-block;
+		margin-right: 10px;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+		text-align: center;
+		line-height: 50px;
+		background: @text-button-optional;
+		&:hover a{
+				color:  @text-head-second;
+			}
+		a{
+			color: @text-head-first;
+			}
+			
+		}
+	}
+	h1, h3{
+		font-family: PassionOne-Regular;
+
+	}
+	h1{
+		position: absolute;
+		left: 5%;
+		top: 20px;
+		font-size: 2.5714em;
+		text-transform: uppercase;
+		color: @text-head-second;
+		z-index: 12;
+		span{
+			color: @text-head-first;
+		}
+	}
+	h3{
+		color: @text-head-second;
+		font-size: 2.5714em;
+		text-align: center;
+		margin-top: 15px;
+		span{
+			color: @text-button-optional;
+		}
+	}
+	h4{
+		background-color: @text-head-second;
+		font-size: 1.5714em;
+		text-align: justify;
+		margin: 0;
+		padding: 5px 10px;
+	}
+	hr{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		width: 58%;
+	}
+	p{
+		font-size: 1.1428em;
+		color: @text-button-optional;
+	}
+	i{
+		color: @text-head-second;
+		padding: 10px 15px;
+	}
 	&-form{
 		position:absolute;
 		left: 5%;
-		top: 10%;
+		top: 80px;
 		width: 33.3%;
-		height: 80%;
+		height: 60%;
 		background-color: @footer-background;
 		z-index: 11;
 	}	
@@ -526,7 +590,11 @@ footer{
 		}
 	}
 }
-
+@media (max-width: 1200px) {
+	.jumbotron h1{
+		font-size: 7em;
+	}
+}
 @media (min-width: 320px) and (max-width: 920px) {
 	.jumbotron{ 
 		padding: 50px 0;
@@ -536,6 +604,9 @@ footer{
 		}
 		& h1{
 			font-size:5.5em;
+		}
+		& img{
+			z-index: -101;
 		}
 	}
 	footer .text-right, .text-left{
