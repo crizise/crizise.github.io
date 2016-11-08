@@ -1,0 +1,52 @@
+
+html, body, h1, h4{
+	margin: 0;
+	padding: 0;
+}
+body{
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+.placeholder{
+	position: relative;
+	width: 100%;
+	min-height: 768px;
+	background: url(img/bacground-total.jpeg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+h1, h4, .rack{
+	position: absolute;
+}
+h1{
+	top: 24%;
+	left: 5%;
+	color: #433546;
+	text-transform: uppercase;
+	font-size: 2.24em;
+	font-family: 'Shrikhand', cursive;
+
+}
+h4{
+	top: 39%;
+	right: 1%;
+	color: #c14543;
+	text-transform: uppercase;
+	font-size: 1.14em;
+	font-weight: 700;
+}
+h4 span{
+	 cursor: pointer;
+	 color: #73AAAD;
+}
+.rack{
+	display: none;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 10px;
+	height: 320px;
+	background-color: #73AAAD;
+	box-shadow: 2px 2px 6px #054548;
+	border-radius: 2px;
+}
