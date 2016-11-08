@@ -23,11 +23,19 @@
 				$('.rack').toggle(1000, function(){
 					$(this).animate({
 						top:'80px',
-						width:'400px',
-						height:'362px'
+						width:'280px',
+						height:'250px'
+					});
+					$('h1').toggle(1000, function() {
+						$(this).animate({
+							top:'4%',
+							left:'33.3%',
+						transform:'translate(50%,0)'
+						});
 					});
 				});
 			});
+			
 		});
 	</script>
 </body>

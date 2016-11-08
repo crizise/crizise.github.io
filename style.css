@@ -45,13 +45,24 @@ h4 span{
 	left: 50%;
 	transform: translate(-50%, 0);
 	width: 10px;
-	height: 320px;
+	height: 250px;
 	background-color: #73AAAD;
 	box-shadow: 2px 2px 6px #054548;
 	border-radius: 2px;
 }
-@media (min-width: 320px) {
+@media (max-width: 500px) {
+	img{
+		width: 280px;
+	}
 	.rack{
-		display: none;
+		width: 100px;
+	}
+	
+}
+@media (max-width: 1166px) {
+	h4{
+		top:65%;
+		right: 50%;
+		transform: translate(50%, 0);
 	}
 }
