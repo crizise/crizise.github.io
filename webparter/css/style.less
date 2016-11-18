@@ -1,0 +1,471 @@
+
+/* ---USE this font for different headers and nav's links---
+font-family: 'Quattrocento', serif;*/
+@import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700');
+/*---USE this font for text in paragraph---
+ font-family: 'Fanwood Text', serif; */
+@import url('https://fonts.googleapis.com/css?family=Fanwood+Text');
+/* 
+---USE this font for logo in nav---
+font-family: 'Chonburi', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Chonburi');
+
+body{
+	background-color: #eee;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Quattrocento', serif;
+}
+h1{
+		color: #003366;
+		font-weight: 600;
+		text-transform: capitalize;
+		text-shadow: 1px 1px 1px #333;
+	}
+p{
+	font: 16px/2 'Fanwood Text', serif;
+}
+.navbar{
+	margin-bottom: 0;
+	border: none;
+	border-color: #003366;
+	&-brand{
+		color: red;
+	}
+	&-default{
+		border-radius: 0;
+		background-color: rgba(0, 52, 102, 0.8);
+	/* background: -webkit-linear-gradient(#7e7e7e, #aaa);
+	background: -o-linear-gradient(#7e7e7e, #aaa);
+	background: linear-gradient(#7e7e7e, #aaa); */
+		.navbar-brand{
+			padding-left: 30px;
+			padding-right: 30px;		
+			color: #eee;
+			font: 600 32px/.5 'Chonburi', cursive;
+			background-color: #e12;
+			&:hover{
+				background-color: #e12;
+				color: #fff;
+			}
+		}
+		.navbar-nav>li>a{
+			color: #eee;/*#003366*/
+			font-weight: 600;
+			font-family: 'Quattrocento', serif;
+		}
+		
+	}
+}
+.jumbotron{
+	position: relative;
+	min-height: 600px;
+	background: url('../img/pexels-photo-40120.png') center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #ddd;/* #003366 */
+	z-index: 0;
+	.container{
+		padding-top: 19%;
+		z-index: 1;
+
+	}
+	h1, p{
+		text-shadow: 1px 1px 1px #333;
+	}
+	h1{
+		font-size: 66px;
+	}
+	p{
+		font-size: 22px;
+	}
+	a{
+		border-radius: 2px;
+		border: 2px solid #fff;/* #003366 */
+		background-color: rgba(0,0,0, 0.0)
+	}
+	.btn-info{
+		color: #eee;/* #003366 */
+		&:hover{
+			border-color: #003366;
+			background-color: rgba(0, 51, 102, .5);
+		} 
+		&:focus{
+			background-color: rgba(0, 51, 102, 1);/* #e12; */
+		}
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 100%;
+		background-color: #003366;
+		-webkit-filter: opacity(33%);
+		filter: opacity(33%);
+		z-index: -1;
+	
+	}
+}
+.about{
+	p{
+		text-indent: 44px;
+		font-size: 22px;
+		font-weight: 400;
+	}
+}
+.services{
+	position: relative;
+	margin-top: 20px;
+	min-height: 500px;
+	background-color: #eee;
+	background: #e12 url('../img/hands-people-woman-working.png') center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-bottom: 20px;
+	z-index: 0;
+	h1, h2{
+		color:#eee;
+		text-shadow: 1px 1px 2px #333;
+
+	}
+	h1{
+		margin-top: 25px;
+		margin-bottom: 15px;
+		text-shadow: 1px 1px 2px #333;
+	}
+	h2{
+		padding: 2px 0;
+		font-weight: 400;
+		font-size: 28px;
+		background-color: rgba(238, 17, 34, 0.8);
+
+	}
+	.container{
+		z-index: 2;
+	}
+	.container-fa{
+		width: 100%;
+		height: 150px;
+		color: #003366;
+	}
+	&-fa-fontsize{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 150px;
+		border: 1px solid #333;
+		background-color: #eee; /* #F95100 */
+		border-radius: 50%;
+		font-size: 42px;
+		line-height: 150px;
+	}
+	h6{
+		border-radius:2px;
+		font-size: 18px;
+		color:#eee;
+		padding: 15px 20px;
+		background: rgba(0, 51, 102, 0.9);
+		font-weight: 500;
+	}
+	a{
+		text-indent: 30px;
+		color:#ddd;
+	}
+	&:after{
+		content: "";
+		display: block;
+		width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top: 0;
+		background-color: #e12;/* rgba(188,147,43,0.7); */
+		filter: opacity(33%);
+		z-index: -1;
+	}
+}
+.team{
+	padding-bottom: 20px;
+	h1{
+		margin-top: 25px;
+	}
+	h2{
+		text-indent: 20px;
+		margin-top: 0;
+	}
+	h5{
+		text-indent: 100px;
+
+	}
+	h5:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	p{
+		padding-right: 10px;
+		font-size: 22px;
+		line-height: 1.4em;
+		text-indent: 15px;
+		margin-bottom: 0;
+		border-right: 3px solid #ddd;
+	}
+}
+.stack{
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background-color: #ddd;
+	z-index: 2; 
+	h1{
+		color:#eee;
+		text-shadow: 1px 1px 2px #333;
+	}
+	ul{
+		li{
+			list-style-type: none;
+			display: inline-block;
+			background-color: red;
+			z-index: 4;
+
+			a{	
+				display: block;
+				min-width: 150px;
+				padding: 110px 40px;
+				background-color: rgba(0,0,0,0.0);
+			}
+			&:first-child{
+				background: url('../img/7.png') no-repeat;
+				background-position: 9px -65px;
+				-webkit-background-size: 500px 400px;
+				background-size: 500px 300px;
+			}
+			&:nth-child(6){
+				background: url('../img/7.png') no-repeat;
+				background-position: -161px -3px;
+				-webkit-background-size: 500px 400px;
+				background-size: 510px 300px;
+			}
+			&:nth-child(2){
+				background: url('../img/7.png') no-repeat;
+				background-position: -330px -65px;
+				-webkit-background-size: 500px 400px;
+				background-size: 510px 300px;
+			}
+			&:nth-child(4){
+				background: url('../img/php-fbd1629392.svg') no-repeat;
+				background-position: 0px 75px;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+			}
+			&:nth-child(5){
+				background: url('../img/bootstrap.png') no-repeat;
+				background-position: -25px 20%;
+				-webkit-background-size: 128%;
+				background-size: 128%;
+			}
+			&:nth-child(3){
+				background: url('../img/wordpress-logo-stacked-rgb-2.png') no-repeat;
+				background-position: 0px 45px;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+			}
+		}
+
+	}
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 100%;
+		background: #ddd url('../img/pexels-photo.png') center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		filter:blur(2px);
+		z-index: -1;
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 100%;
+		background-color: rgba(0, 51, 102, .4);
+		z-index: -1;
+	}
+	a.btn-info{
+		margin-top: 20px;
+		border-radius: 2px;
+		border: 2px solid #fff;/* #003366 */
+		background-color: rgba(0,0,0, 0.0);
+		color: #eee;/* #003366 */
+		&:hover{
+			border-color: #003366;
+			background-color: rgba(0, 51, 102, .5);
+		} 
+		&:focus{
+			background-color: rgba(0, 51, 102, 1)/*  #e12; */
+		}
+	}
+}
+.partners{
+	padding-bottom: 20px;
+	h1{
+		padding: 15px 0 20px 0;
+	}
+	img{
+		width: 	25%;
+	}
+	a{
+		font: 400 22px/1.5 'Fanwood Text', serif;
+		color: #003366;
+		&:hover, &:focus{
+			color: #d12;
+			text-decoration: none;
+		}
+	}
+	p{
+		font-size: 18px;
+		line-height: 1.8em;
+		&:before{
+			content: "\201c";
+			margin-right: 5px;
+		}
+		&:after{
+		content: "\201d";
+		margin-left: 5px;
+		}
+		&:before, &:after{
+			font-size: 	32px;
+			color: #003366;
+		}
+	}
+}
+.portfolio{
+	position: relative;
+	background-color: #ddd;
+	z-index: 1;
+	padding-top: 15px;
+	padding-bottom: 40px;
+	h1{
+		color:#eee;
+		padding-bottom: 10px;
+	}
+	a{	padding-right: 0;
+		padding-left: 0;
+		border-radius: 5px;
+		position: relative;
+		&:hover img{
+			background-color: rgba(0, 51, 102, 0.8);
+
+		}
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 51, 102, 0.1);
+		}
+	}
+	.thumbnail{
+		border-radius: 2px;
+		padding: 0;
+	}
+	&:before, &:after{
+		z-index: -1;
+	}
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #ddd url('../img/city-skyline-skyscrapers-top.png') center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		filter: blur(1px);
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #e12;
+		filter: opacity(33%);
+	}
+	
+}
+.contact{
+	background-color: #8099b3;
+	padding-top: 15px;
+	padding-bottom: 35px;
+	&-btn{
+		color: #eee;
+		font-size: 18px;
+		background-color: rgba(238, 17, 34,0.8);
+		border: 2px solid #eee;
+		border-radius: 1px;
+		&:hover, &:focus{
+			color: #eee;
+			background-color: rgba(238, 17, 34, 1);
+		}
+	}
+	input{
+		border: 2px solid #eee;
+		border-radius: 1px;
+		font-size: 18px;
+		height: 40px;
+		background-color: rgba(238, 17, 34, .2);
+	}
+	label{
+		font-size: 18px;
+	}	
+	form{
+		font-size: 18px;
+		padding-left: 60px;
+		font-family: 'Quattrocento', serif;
+		margin: 20px auto;
+	}
+	
+}
+footer{
+	width: 100%;
+	min-height: 50px;
+	background-color: rgba(0, 52, 102, 0.8);
+	.w30{
+		width: 33%;
+	}
+	hr{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	p{
+		margin-top: 2px;
+		margin-bottom: 5px;
+		color: #eee;
+		font-size: 22px;
+		line-height: 50px;
+
+	}
+	a{
+
+		font-size: 28px;
+		color: #eee;
+		padding: 8px 20px 14px 20px;
+		background-color: #e12;
+		&:focus, &:hover{
+			text-decoration: none;
+			color: #eee;
+		}
+	}
+}
