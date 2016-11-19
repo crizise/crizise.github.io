@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
 </head>
 <body>
 	<header>
@@ -25,13 +26,13 @@
 				</button>
 				<div id="collapsable-nav" class="navbar-collapse collapse">
 					<ul class="navbar-right nav navbar-nav text-uppercase">
-						<li id="home"><a href="#">home</a></li>
-						<li id="about"><a href="#">about us</a></li>
-						<li id="services"><a href="#">services</a></li>
-						<li id="portfolio"><a href="#">portfolio</a></li>
-						<li id="team"><a href="#">our team</a></li>
-						<li id="testimonials"><a href="#" >testimonials</a></li>
-						<li id="contact"><a href="#">contact</a></li>
+						<li id="home"><a href="#home-section">home</a></li>
+						<li id="about"><a href="#about-section">about us</a></li>
+						<li id="services"><a href="#services-section">services</a></li>
+						<li id="team"><a href="#team-section">our team</a></li>
+						<li id="testimonials"><a href="#testimonials-section" >testimonials</a></li>
+						<li id="portfolio"><a href="#portfolio-section">portfolio</a></li>
+						<li id="contact"><a href="#contact-section">contact</a></li>
 					</ul>	
 				</div>
 			</div class="container">
@@ -43,25 +44,28 @@
 				<div class="col-md-7 col-md-offset-5">
 					<h1 class="text-right">Lorem ipsum dolor!</h1>
 					<p class="text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Necessitatibus est dolor fugit excepturi ab corporis ad rerum, quas!</p>
-					<a href="#aboutUs" class="btn btn-info text-uppercase btn-lg pull-right"> 
+					<a href="#about-section" class="btn btn-info text-uppercase btn-lg pull-right"> 
 						lern more
 					</a>
 				</div>
 			</div>
 		</div>
-		<section  id="aboutUs" class="about">
+		<section  id="about-section" class="about">
 			<div class="container">
-				<h1 class="text-center text-capitalize">about as</h1>
+				<h1 class="text-center text-capitalize">about us</h1>
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-justify">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem blanditiis, similique distinctio? Suscipit aperiam debitis voluptatum ex perferendis soluta at quaerat aspernatur corporis, pariatur fugit autem, sed similique. Corporis, harum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nihil, necessitatibus aliquid, reiciendis, velit cum molestias magnam, obcaecati cumque soluta perferendis ratione eveniet quae itaque doloremque dicta. Quibusdam tenetur, nulla.
-
 						</p>
+					</div>
+					<div class="col-md-2 col-md-offset-5">
+						<a href="#team-section" class="btn btn-info text-uppercase btn-lg ">crew
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="services">
+		<section id="services-section" class="services">
 			<div class="container">
 				<div class="row">
 					<h1 class="text-center">We offer</h1>
@@ -87,9 +91,13 @@
 						<h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, quas quisquam sapiente aperiam, corporis accusantium ipsum voluptatem recusandae<br><br><a href="#">More...</a></h6>
 					</div>
 				</div>
+				<div class="col-md-2 col-md-offset-5">
+						<a href="#stack-section" class="btn btn-info text-uppercase btn-lg ">stack
+					</a>
+				</div>
 			</div>
 		</section>
-		<section class="team">
+		<section id="team-section" class="team">
 			<div class="container">
 				<div class="row">
 					<h1 class="text-center">Our team</h1>
@@ -105,10 +113,14 @@
 						<h5 class="text-right text-info">Co-founder, front-end developer/designer</h5>
 						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quaerat incidunt odio modi, in dicta libero distinctio ipsum vel asperiores, nam iusto, aperiam ipsam inventore et! Provident, aliquid. <a href="#">Temporibus, aut.</a></p>
 					</div>
+					 <div class="col-md-2 col-md-offset-5">
+						<a href="#testimonials-section" class="btn btn-info text-uppercase btn-lg ">partners
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="stack">
+		<section id="stack-section" class="stack">
 			<div class="container">
 				<h1 class="text-center">We Use</h1>
 				<div class="row">
@@ -120,16 +132,16 @@
 						<li class="col-md-2"><a href="#"></a></li>
 						<li class="col-md-2"><a href="#"></a></li>
 					</ul>
-					<a href="" class="btn btn-info text-uppercase btn-lg col-md-2 col-md-offset-5"> 
-						lern more
+					<a href="#portfolio-section" class="btn btn-info text-uppercase btn-lg col-md-2 col-md-offset-5"> 
+						result
 					</a>
 				</div>
 			</div>
 		</section>
-		<section class="partners">
+		<section id="testimonials-section" class="partners">
 			<div class="container">
 				<div class="row">
-					<h1 class="text-center">Your revard</h1>
+					<h1 class="text-center">Your rewards</h1>
 					<div class="col-md-4">
 						<img src="img/customer-man.png" alt="customer" class="img-rounded pull-right">
 						<h3>John Deere</h3>
@@ -150,11 +162,15 @@
 						<h4>John Deere inc.</h4>
 						<p class="text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eos, dolor, ratione nam consequatur vitae porro officia quia ex neque voluptatibus harum!</p>
 						<a href="#">www.ourpartner.co</a>
-						</div>
+					</div>
+					 <div class="col-md-2 col-md-offset-5">
+						<a href="#contact-section" class="btn btn-info text-uppercase btn-lg ">become a partner
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="portfolio">
+		<section id="portfolio-section" class="portfolio">
 			<h1 class="text-center">We proud</h1>
 			<div class="container">
 				<div class="row">
@@ -182,7 +198,7 @@
 			</div>
 		</section>
 
-		<section class="contact">
+		<section id="contact-section" class="contact">
 			<div class="container">
 				<div class="row">
 						<h1 class="text-center">Contact Us</h1>
@@ -197,8 +213,8 @@
 									<label for="exampleInputEmail2">Email</label>
 									<input type="email" class="form-control" id="exampleInputEmail2" placeholder="john.deere@deere.com">
 								</div>
-								<button type="submit" class="btn contact-btn">Send invitation</button>
-							</form>
+								<div class="col-md-5 col-md-offset-3"><button type="submit" class="btn contact-btn">Send invitation</button>
+															</div>							</form>
 					</div>
 				</div>
 			</div>
@@ -208,5 +224,31 @@
 		<div class="container">
 			<p class="text-center">Creat by&nbsp;<a href="index.html" class="footer-logo">The Partners</a>&nbsp;in 2016</p></div>
 	</footer>
+	<script type="text/javascript">
+		$(function () {
+			$.scrollUp({
+				scrollName: 'scrollUp', // Element ID
+				topDistance: '800', // Distance from top before showing element (px)
+				topSpeed: 1000, // Speed back to top (ms)
+				animation: 'fade', // Fade, slide, none
+				animationInSpeed: 1000, // Animation in speed (ms)
+				animationOutSpeed: 1000, // Animation out speed (ms)
+				scrollImg: true,
+				activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+			});
+		});
+		$('a[href*="#"]:not([href="#"])').click(function() {
+ 			 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+   				 var target = $(this.hash);
+   				 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    			if (target.length) {
+     			$('html, body').animate({
+        			scrollTop: target.offset().top
+    				}, 1000);
+      			return false;
+				}
+  }
+});
+	</script>
 </body>
 </html>
