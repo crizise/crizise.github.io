@@ -545,7 +545,7 @@ footer{
 	background-size: 72%;
 	border: 1px solid #fff;
 	border-radius:50%;
-	opacity: 0.8;
+	opacity: 0.7;
 	&:hover{
 		/* background-color: rgba(0, 52, 102, .5); */
 	}
@@ -642,4 +642,84 @@ footer{
 			color: #e12;
 		}
 	}
+	.scrollUp{
+		opacity: 0.4;
+	}
+}
+@media (max-width: 320px){
+	.navbar-toggle{
+		margin-left: 35px;
+		float: none;
+	}
+	.navbar-default .navbar-brand{
+		font-size: 24px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.stack{
+		ul{
+		li{
+			list-style-type: none;
+			display: inline-block;
+			background-color: red;
+			z-index: 4;
+
+			a{	
+				display: block;
+				min-width: 120px;
+				padding: 110px 40px;
+				background-color: rgba(0,0,0,0.0);
+			}
+			&:first-child{
+				background: url('../img/htmljscss.png') no-repeat;
+				background-position: 15px -50px;
+				-webkit-background-size: 400px 250px;
+				background-size: 400px 250px;
+			}
+			&:nth-child(6){
+				background: url('../img/htmljscss.png') no-repeat;
+				background-position: -127px -3px;
+				-webkit-background-size: 400px 250px;
+				background-size: 400px 250px;
+			}
+			&:nth-child(2){
+				background: url('../img/htmljscss.png') no-repeat;
+				background-position: -260px -50px;
+				-webkit-background-size: 400px 250px;
+				background-size: 400px 250px;
+			}
+			&:nth-child(4){
+				background: url('../img/php.svg') no-repeat;
+				background-position: 0px 30px;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+			}
+			&:nth-child(5){
+				background: url('../img/bootstrap.png') no-repeat;
+				background-position: 0px ;
+				-webkit-background-size: 111%;
+				background-size: 111%;
+			}
+			&:nth-child(3){
+				background: url('../img/wordpress.png') no-repeat;
+				background-position: 0px 45px;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+			}
+		}
+
+	}
+	}
+	footer{
+		a{
+			padding-top: 12px;
+			font-size: 23px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.scrollUp{
+		opacity: 0.4;
+	}
+
 }
