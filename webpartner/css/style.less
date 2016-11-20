@@ -56,7 +56,6 @@ p{
 }
 .jumbotron{
 	position: relative;
-	min-height: 600px;
 	background: url('../img/jumbotron-md.jpg') center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -283,15 +282,15 @@ p{
 			}
 			&:first-child{
 				background: url('../img/htmljscss.png') no-repeat;
-				background-position: 9px -65px;
+				background-position: 15px -65px;
 				-webkit-background-size: 500px 400px;
 				background-size: 500px 300px;
 			}
 			&:nth-child(6){
 				background: url('../img/htmljscss.png') no-repeat;
-				background-position: -161px -3px;
+				background-position: -166px -3px;
 				-webkit-background-size: 500px 400px;
-				background-size: 510px 300px;
+				background-size: 525px 300px;
 			}
 			&:nth-child(2){
 				background: url('../img/htmljscss.png') no-repeat;
@@ -330,7 +329,7 @@ p{
 		background: #ddd url('../img/stack-md.jpg') center no-repeat;
 		-webkit-background-size: cover;
 		background-size: cover;
-		filter:blur(2px);
+		filter:blur(.5px);
 		z-index: -1;
 	}
 	&:after{
@@ -340,7 +339,7 @@ p{
 		top: 0;
 		width: 100%;
 		min-height: 100%;
-		background-color: rgba(0, 51, 102, .4);
+		background-color: rgba(0, 51, 102, .3);
 		z-index: -1;
 	}
 	a.btn-info{
@@ -546,6 +545,7 @@ footer{
 	background-size: 72%;
 	border: 1px solid #fff;
 	border-radius:50%;
+	opacity: 0.8;
 	&:hover{
 		/* background-color: rgba(0, 52, 102, .5); */
 	}
@@ -568,19 +568,74 @@ footer{
 			float: none;
 		}
 	}
+	.about{
+		p{
+			text-align: center;
+		}
+		a.btn-info{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
 	.services{
 		background: url('../img/service-sm.jpg') center no-repeat;
 		-webkit-background-size: cover;
 		background-size: cover;
+		.text-left, .text-right{
+			text-align: center;
+		}
+		a.btn-info{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.team{
+		h1{
+			padding-bottom: 10px;
+		}
+		h2.text-right{
+			margin-top: ;
+			text-align: left;
+		}
+		h5.text-right{
+			text-align: left;
+			text-indent: 10px;
+		}
+		img.pull-left{
+
+			float:right;
+		}
+		a.btn-info{
+			width: 100%;
+		}
+		
 	}
 	.stack{
 		background: url('../img/stack-sm.jpg') center no-repeat;
 		-webkit-background-size: cover;
 		background-size: cover;
+		a.btn-info{
+			width: 100%;
+		}
 	}
 	.portfolio{
 		background: url('../img/portfolio-sm.jpg');
 		-webkit-background-size: cover;
 		background-size: cover;
+	}
+	.partners{
+		a.btn-info{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.contact{
+		a{
+			font-size: 42px;
+			color: #003366;
+		}
+		&:focus{
+			color: #e12;
+		}
 	}
 }
