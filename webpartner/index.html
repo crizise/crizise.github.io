@@ -7,6 +7,7 @@
 	<title>Web parnter</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/devicon.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -56,7 +57,7 @@
 			<div class="container">
 				<div class="row">
 				<h1 class="text-center text-capitalize">about us</h1>
-					<div class="col-md-8 col-md-offset-2 col-xs-12">
+					<div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
 						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem blanditiis, similique distinctio? Suscipit aperiam debitis voluptatum ex perferendis soluta at quaerat aspernatur corporis, pariatur fugit autem, sed similique. Corporis, harum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nihil, necessitatibus aliquid, reiciendis, velit cum molestias magnam, obcaecati cumque soluta perferendis ratione eveniet quae itaque doloremque dicta. Quibusdam tenetur, nulla.
 						</p>
 						<a href="#team-section" class="btn btn-info text-uppercase btn-lg ">crew
@@ -124,14 +125,51 @@
 			<div class="container">
 				<h1 class="text-center">We Use</h1>
 				<div class="row">
-					<ul class="col-md-12">
-						<li class="col-md-2 col-xs-6"><a href="#">	</a></li>
-						<li class="col-md-2 col-xs-6"><a href="#"></a></li>
-						<li class="col-md-2 col-xs-6"><a href="#"></a></li>
-						<li class="col-md-2 col-xs-6"><a href="#"></a></li>
-						<li class="col-md-2 col-xs-6"><a href="#"></a></li>
-						<li class="col-md-2 col-xs-6"><a href="#"></a></li>
-					</ul>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-html5-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4  col-sm-2">
+							<i class="devicon-css3-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4  col-sm-2">
+							<i class="devicon-jquery-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-php-plain"></i>
+
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-less-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-javascript-plain"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-wordpress-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4  col-sm-2">
+							<i class="devicon-bootstrap-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-illustrator-plain"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-github-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4 col-sm-2">
+							<i class="devicon-chrome-plain-wordmark"></i>
+						</div>
+						<div class="col-xs-4  col-sm-2">
+							<i class="devicon-firefox-plain-wordmark"></i>
+						</div>
+					<!-- <ul class="col-md-12">
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#">	</a></li>
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#"></a></li>
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#"></a></li>
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#"></a></li>
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#"></a></li>
+						<li class="col-md-2 col-xs-6 col-sm-4"><a href="#"></a></li>
+					</ul> -->
 					<div class="col-md-12"><a href="#portfolio-section" class="btn btn-info text-uppercase btn-lg col-md-2 col-md-offset-5">here result</a></div>
 				</div>
 			</div>
@@ -200,10 +238,12 @@
 			<div class="container">
 				<div class="row">
 						<h1 class="text-center">Contact Us</h1>
-						<div class="col-md-12 text-center">
+						<div class="col-md-12 text-center visible-xs visible-sm hidden-md hidden-lg">
 							<a href="mailto:a.kolomitsev@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+							<a href="#">
+							</a>
 						</div>
-						<div class="col-md-10 col-md-offset-2 hidden-xs">
+						<div class="col-md-10 col-md-offset-2 hidden-xs hidden-sm">
 							<form class="form-inline">
 								<div class="form-group">
 									<label for="exampleInputName2">Name</label>
@@ -255,9 +295,9 @@
 		});
 		//******************************/scroll to id**********
 		//****collapse the navbar menu blur********************	
-		$("#navbarToogle").blur(function (event) {
+		/*$("#navbarToogle").blur(function (event) {
 			var screenWidth = window.innerWidth;
-			if (screenWidth < 768) {
+			if (screenWidth < 1200) {
 				$("#collapsable-nav").collapse('hide');
 				console.log('121212')
 				}	
@@ -265,7 +305,7 @@
 			$("#navbarToogle").click(function (event) {
 			$(event.target).focus();
 			});
-		//**************/collapse the navbar blur**************
+*/		//**************/collapse the navbar blur**************
 	</script>
 </body>
 </html>

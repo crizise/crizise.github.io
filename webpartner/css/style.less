@@ -263,61 +263,54 @@ p{
 	padding-bottom: 20px;
 	background-color: #ddd;
 	z-index: 2; 
+	.row{
+		text-align: center;
+		i{
+			line-height: 100px;
+			text-align: right;
+			font-size: 77px;
+			&.devicon-html5-plain-wordmark{
+				color: #e52;
+			}
+			&.devicon-css3-plain-wordmark{
+				color: #0af;
+			}
+			&.devicon-jquery-plain-wordmark{
+				color: #123;
+			}
+			&.devicon-php-plain{
+				color: #68c;
+			}
+			&.devicon-less-plain-wordmark{
+				color: #fff;
+			}
+			&.devicon-javascript-plain{
+				color: #fe5;
+			}
+			&.devicon-wordpress-plain-wordmark{
+				color: #ddd;
+			}
+			&.devicon-bootstrap-plain-wordmark{
+				color: #548;
+			}
+			&.devicon-illustrator-plain{
+				color: #f82;
+			}
+			&.devicon-github-plain-wordmark{
+				color: #123;
+			}
+			&.devicon-chrome-plain-wordmark{
+				color: #d33;
+			}
+			&.devicon-firefox-plain-wordmark{
+				color: #000;
+			}
+		}
+	}
+	
 	h1{
 		color:#eee;
 		text-shadow: 1px 1px 2px #333;
-	}
-	ul{
-		li{
-			list-style-type: none;
-			display: inline-block;
-			background-color: red;
-			z-index: 4;
-
-			a{	
-				display: block;
-				min-width: 150px;
-				padding: 110px 40px;
-				background-color: rgba(0,0,0,0.0);
-			}
-			&:first-child{
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: 15px -65px;
-				-webkit-background-size: 500px 400px;
-				background-size: 500px 300px;
-			}
-			&:nth-child(6){
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: -166px -3px;
-				-webkit-background-size: 500px 400px;
-				background-size: 525px 300px;
-			}
-			&:nth-child(2){
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: -330px -65px;
-				-webkit-background-size: 500px 400px;
-				background-size: 510px 300px;
-			}
-			&:nth-child(4){
-				background: url('../img/php.svg') no-repeat;
-				background-position: 0px 75px;
-				-webkit-background-size: 100%;
-				background-size: 100%;
-			}
-			&:nth-child(5){
-				background: url('../img/bootstrap.png') no-repeat;
-				background-position: -25px 20%;
-				-webkit-background-size: 128%;
-				background-size: 128%;
-			}
-			&:nth-child(3){
-				background: url('../img/wordpress.png') no-repeat;
-				background-position: 0px 45px;
-				-webkit-background-size: 100%;
-				background-size: 100%;
-			}
-		}
-
 	}
 	&:before{
 		content: "";
@@ -550,6 +543,37 @@ footer{
 		/* background-color: rgba(0, 52, 102, .5); */
 	}
 }
+@media (min-width: 962px){
+	.stack{
+		.row i{
+			font-size: 120px;
+			line-height: 150px;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 962px){
+	/* a.navbar-brand{
+		display: none;
+	} */
+	.about, .services, .team, .stack, .partners{
+		a.btn-info{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.stack{
+		
+	}
+	.contact{
+		a{
+			font-size: 42px;
+			color: #003366;
+		}
+		&:focus{
+			color: #e12;
+		}
+	}
+}
 @media (min-width: 320px) and (max-width: 768px){
 	.navbar-default .navbar-brand{
 		padding-left: 15px;
@@ -649,69 +673,14 @@ footer{
 		opacity: 0.4;
 	}
 }
-@media (max-width: 320px){
+@media (min-width: 319px) {
 	.navbar-toggle{
-		margin-left: 35px;
-		float: none;
+		float: right;
 	}
 	.navbar-default .navbar-brand{
 		font-size: 24px;
 		padding-left: 10px;
 		padding-right: 10px;
-	}
-	.stack{
-		ul{
-		li{
-			list-style-type: none;
-			display: inline-block;
-			background-color: red;
-			z-index: 4;
-
-			a{	
-				display: block;
-				min-width: 120px;
-				padding: 110px 40px;
-				background-color: rgba(0,0,0,0.0);
-			}
-			&:first-child{
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: 15px -50px;
-				-webkit-background-size: 400px 250px;
-				background-size: 400px 250px;
-			}
-			&:nth-child(6){
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: -127px -3px;
-				-webkit-background-size: 400px 250px;
-				background-size: 400px 250px;
-			}
-			&:nth-child(2){
-				background: url('../img/htmljscss.png') no-repeat;
-				background-position: -260px -50px;
-				-webkit-background-size: 400px 250px;
-				background-size: 400px 250px;
-			}
-			&:nth-child(4){
-				background: url('../img/php.svg') no-repeat;
-				background-position: 0px 30px;
-				-webkit-background-size: 100%;
-				background-size: 100%;
-			}
-			&:nth-child(5){
-				background: url('../img/bootstrap.png') no-repeat;
-				background-position: 0px ;
-				-webkit-background-size: 111%;
-				background-size: 111%;
-			}
-			&:nth-child(3){
-				background: url('../img/wordpress.png') no-repeat;
-				background-position: 0px 45px;
-				-webkit-background-size: 100%;
-				background-size: 100%;
-			}
-		}
-
-	}
 	}
 	footer{
 		a{
@@ -724,5 +693,13 @@ footer{
 	.scrollUp{
 		opacity: 0.4;
 	}
+
+}
+@media (max-width: 1200px) {
+	.collapse.in{
+		display:block !important;
+	}
+}
+@media (max-width: 485px){
 
 }
