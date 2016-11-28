@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+/* font-family: 'Alfa Slab One', cursive;
+ */
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+/* font-family: 'Gentium Book Basic', serif; */
+h1,h2,h3,h4,h5,h6,.navbar-brand,.btn-default{
+	font-family: 'Alfa Slab One', cursive;
+}
+p,ul,li,label{
+	 font-family: 'Gentium Book Basic', serif;;
+
+}
+h1{
+	text-align: center;
+	font-size: 3.1em;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	text-shadow: 4px 3px 0 #afafaf, 9px 8px 0 rgba(0,0,0,0.15);
+}
+header{
+	width: 100%;
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	background: #ddd;
+	background: #073A8C;
+	z-index: 2;
+	.navbar-brand{
+		color: #333;
+		font-size: 4.5em;
+		text-transform: uppercase;
+		font-style: italic;
+		text-shadow: 5px 3px 0 #afafaf, 9px 8px 0 rgba(0,0,0,0.15);
+			
+		span{
+			text-transform: lowercase;
+			font-style: italic;
+			vertical-align: top;
+		}
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right:0;
+		background: url('../img/cheap_diagonal_fabric.png') center repeat;
+		z-index:-1 ;
+		filter: opacity(.5);
+	}
+}
+
+main{
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	background: #1560db;
+	z-index: 2;
+	padding: 50px 10px;
+	border-top: 5px dashed #c44; 
+	border-bottom: 5px dashed #c44; 
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right:0;
+		background: url('../img/cheap_diagonal_fabric.png') center repeat;
+		 background-attachment: fixed;
+		z-index: -2;
+		filter: opacity(.8);
+	}
+	.rightside, .leftside{
+		padding: 0px 20px;
+	}
+	.leftside{
+		ul{
+			list-style-type: none;
+			li{
+				font-size: 1.4em;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				text-align: left;
+				padding: 5px 10px;
+
+			}
+		}
+		i{
+			font-size: 1.2em;
+			padding: 10px 10px;
+			background: #afafaf;
+			color: #333;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		.tech{
+			li{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.form-control{
+		height: 3.2em;
+	}
+	.fa-envelope{
+	}
+	.btn-default{
+		width: 100%;
+		color: #ddd;
+		font-size: 1.8em;
+		background-color: #c44;
+	}
+	label{
+		font-size: 1.2em;
+	}
+	.textareafix{
+		min-height: 60px;
+		position: relative;
+		#textarea{
+		width: 78%;
+		position: absolute;
+		right: 15px;
+		}
+	}
+	
+
+}
+footer{
+	width: 100%;
+	min-height: 30px;
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	background: #ddd;
+	background: #073A8C;
+	z-index: 2;
+	
+	p{
+		font-size: 1.2em;
+		text-transform: capitalize;
+		text-align: right;
+		padding: 10px;
+
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right:0;
+		background: url('../img/cheap_diagonal_fabric.png') center repeat;
+		z-index:-1 ;
+		filter: opacity(.5);
+	}
+}
