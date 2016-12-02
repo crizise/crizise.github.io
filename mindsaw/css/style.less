@@ -75,6 +75,7 @@ header{
 		.submenu{
 			line-height: 48px;
 			float: right;
+
 			ul{
 				li{
 					line-height: 30px;
@@ -136,16 +137,36 @@ header{
 		width: 100%;
 		margin-top: 48px;
 		padding: 38px 20px;
-		max-height: 300px;
+
   
-		a{				
-			padding: 0 50%;
+		a{	
+			display: block;
+			width: 320px;
+			height: 100px;
+			margin: 0 auto;			
 			img{
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
-				-o-transform: translateX(-50%);
-				transform: translateX(-50%);
 				max-width: 360px;
+			}
+		}
+	}
+	.sidenav{
+		width:33.3332%;
+		height: 100%;
+		/* width: 0; */
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #eee;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+		ul{
+			li{
+				display: block !important;
+				a{
+					
+				}
 			}
 		}
 	}
@@ -369,10 +390,97 @@ main{
     } */
 	.testimonials-box{
 		width: 100%;
-		max-height: 300px;
-		img{
+		padding-top: 20px;
+		padding-bottom: 25px;
+		h3{
+			font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+			text-transform: uppercase;
+			margin: 25px 0;
+			color: @text-headers-color;
+			font-size: 1.5em;
+			font-weight: 600;
+			line-height: 1.4;
+		}
+		.wrap{
+			background: #70c0b3;
 			width: 100%;
+			.box{
+				width: 50%;
+				float: left;
+				.left{
+					position: relative;
+					width: 100%;
+					height: 500px;
+					background: #eee url('../img/Grocery-.jpg') center no-repeat;
+					-webkit-background-size: cover;
+					background-size: cover;
+					padding: 40% 20%;
+					h2{		
+						background: rgba(112, 192, 179, .75);
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+						text-transform: uppercase;
+						color: #eee;
+						font-size: 1.7em;
+						font-weight: 600;
+						line-height: 1.4;
+						padding: 0;							
+					}
+				}
 
+				.right{
+					height: 100%;
+					margin: 15% 10%;
+					p{
+						display: block;
+						font-size: 1.44em;
+						line-height: 1.4em;
+						text-align: center;
+						margin-bottom: 0;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+
+						color: @text-headers-color;
+						&:before{
+							content: "\201c";
+							display: block;
+							text-align: left;
+							color: #eee;
+							font-family: arial;
+							font-size: 5em;
+
+						}
+						&:after{
+							content: "\201d";
+							display: block;
+							color: #eee;
+							text-align: right;
+							padding-top: .5em;
+							font-family: arial;
+							font-size: 5em;
+							padding-top: 20px;
+						}
+					}
+					span{
+						display: block;
+						font-size: 1.3em;
+						line-height: 1.1em;
+						text-align: left;
+						color: @text-headers-color;
+						padding-top: 10px;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+							font-style: italic;
+						}
+						img{
+							padding-top: 15px;
+							max-width: 250px;
+							height: auto;
+						}
+				}
+			}
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}			
 		}
 	}
 	.portfolio{
@@ -387,18 +495,75 @@ main{
 		}
 		.wrap{
 			width: 100%;
-			background-color: maroon;
 			.box{
-				width: 16.6666%;
+				width: 16.66667%;
+				height: auto;
+				display: block;
+				float: left;
+				overflow: hidden;
+				position: relative;
+				background: #fff;
+				b
 				.one{
-					width: 100%;
-				
+
+				padding-bottom: 0;
+					
 				}
 				img{
 					width: 100%;
+					margin-bottom: 0;
+					
+				}
+				a{
+					text-decoration: none;
+					text-align: center;
+					display: none;
+					text-transform: uppercase;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 170px;
+					height: 40px;
+					margin-left: -85px;
+					margin-top: -25px;
+					background: #f29109;
+					background: linear-gradient(to top, #f29109, #f9ad25);
+					color: #fff;
+					/* -webkit-box-shadow: 0px 24px 30px -15px rgba(84,5,5,0.62);
+					-moz-box-shadow: 0px 24px 30px -15px rgba(84,5,5,0.62);
+					box-shadow: 0px 24px 30px -15px rgba(84,5,5,0.62); */
+					line-height: 40px;
+					border-radius: 5px;
+					font-size: 1.3em;
+					font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+					font-weight: 600;
+					box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+					opacity: 0;
 				}
 			}
+			.one:hover {
+				img{
+					transform: scale(1.05);
+					transition: all ease .5s;
+					opacity: 0.5;
+					filter: blur(2px);
+				}
+				a{
+					animation-name: fadeIn;
+					animation-duration: 250ms;
+					animation-timing-function: ease-in;
+					animation-fill-mode: forwards;
+					animation-delay: 0s;
+					display: block;
+				}
+			}
+			&:after{
+			content: "";
+			display: block;
+			clear: both;
+			}
 		}
+		
 
 	}
 	.subscribe{
@@ -444,20 +609,23 @@ footer{
 		padding: 40px 0px;
 		letter-spacing: .015em;
 		text-align: center;
-		.container{
-			/* max-width: 1180px; */
-		}
-		.col-md-3{
-			/* width: 26%; */
-
-		}
-		.col-md-2{
-			/* width: 18.5%; */
-			/* padding: 0; */
-		}
 		.footer-logo{
+						text-transform: lowercase;
+
 			img{
 				max-width: 220px;
+				-webkit-filter:grayscale(100%);
+				filter:grayscale(100%);
+			}
+			ul{
+				li{
+						text-align: left;
+
+					a{
+						text-transform: lowercase;
+						text-align: left;
+					}
+				}
 			}
 		}
 		h4{
@@ -467,6 +635,7 @@ footer{
 			color: #fff;
 			line-height: 1.4;
 			font-weight: 600;
+			padding-top: 15px;
 		}
 		ul{
 
@@ -497,9 +666,21 @@ footer{
 				opacity: .8;
 			}
 		}
-		.footer-menu{
+		.info{
+			a{
+						color: @footer-text-color;
+			line-height: 2;
+			font-size: 0.875em;
+			text-decoration: none;
+			transition: color 0.1s ease-in-out;
+			&:hover, &:focus{
+				opacity: .8;
+			}	
+			}
+
 		}
 		.social-buttons{
+			padding-bottom: 15px;
 			ul{
 				li{
 					display: inline-block;
@@ -524,6 +705,27 @@ footer{
 	}
 }
 @media (max-width: 991px){
+	.testimonials-box{
+		.wrap{
+			.box{
+				width: 100% !important;
+				img{
+					padding: 5% !important;
+				}
+				.right{
+					margin: 10px 5% !important;
+				}
+			}
+		}
+	}
+	.portfolio{
+		.wrap{
+			.box{
+				width: 33.3332% !important;
+				float: none;
+			}
+		}
+	}
 	footer{
 		.footer{
 			h4{
