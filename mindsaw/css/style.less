@@ -3,7 +3,9 @@
 @import "fonts";
 body{
 	font-weight: 400;
+	position: relative;
 }
+
 h1, h2, h3, h4, h5, h6{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -36,10 +38,21 @@ a{
     -moz-transition: color 0.1s ease-in-out;
     transition: color 0.1s ease-in-out
 }
+.overlay{
+	display: none;
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .7;
+}
 header{
 	.menu-close,.menu-link{
 		display: none;
 		font-size: 1.1em;
+		
 	}
 
 	font-family: "Montserrat","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -55,19 +68,19 @@ header{
 		.search-box{
 			line-height: 48px;
 			float: left;
+		
 		a{
 				padding: 4px 6px;
 				font-size: 1.35em;
 				text-decoration: none;
 				color: @header-text-color;
-				i{
+				i, span{
 					font-size: 1.5em;
 					vertical-align: middle;
 					padding: 4px 0px;
 					padding-right: 4px;
 				}
-				span{
-				}
+				
 				&:hover{
 				color: @header-text-hover;
 				}
@@ -166,30 +179,58 @@ header{
 		overflow-x: hidden;
 		transition: 0.5s;
 		padding-top: 60px;
-		.menu-item-has-children{
-			margin: auto;
-			a{
-				text-align: center;
-			}
-			.sub-menu{
-				display: none;
-				position: relative;
-				top: 0;
-			}
-			&:hover {
-				.sub-menu{
-					display: block;
-					
-				}
-				li{
-				transition: width 2s;
+		ul{
+			text-align: left;
+			li{
+				border-bottom: 1px solid #cacaca;
+				margin-left: 0px;
+				&:hover{
+					background-color: #fff;
 				}
 			}
 		}
+		.menu-item-has-children{
+				background-color: #eee;
+				border: 0;
+			li{
+				padding-left: ;
+				margin-left: 0px;
+
+				a{
+					text-align: left;
+				}
+				
+			}
+			&:focus, &:hover{
+					.sub-menu{
+						display: block;
+					}
+				}
+			.sub-menu{
+				display: none;
+				background-color: #ddd;
+				margin-left: 40px;
+				width: 100%;
+				position: relative;
+				top: 0;
+				text-align: left;
+				li{
+					border: 0;
+				}
+			}
+			 &:hover {
+				background-color: #eee;
+			}
+		}
+		
 		ul{
 			li{
 				padding: 5px 0;
 				display: block !important;
+			
+				a ul li&:first-child{
+					
+				}
 				a{
 					
 				}
@@ -224,9 +265,9 @@ header{
 			top:0;
 			width: 100px;
 			.sub-menu{
-
+					border-radius: 2px;
 				li{
-					padding: 4px 7px;
+					padding: 5px 12px;
 					margin: 0;
 					a{
 											}
@@ -251,7 +292,7 @@ header{
 		.sub-menu{
 			position: absolute;
 			left:-25px;
-			top: 25px;
+			top: 30px;
 			min-width: 150px;
 			background-color: #fff;
 			border-radius: 1px;
@@ -270,8 +311,12 @@ header{
 				}
 
 			}
+			ul{
+				transition: width 2s;
+
+			}
 			&:hover{
-				li{
+				ul{
 					display: block;
 				}
 			}
@@ -793,6 +838,9 @@ footer{
 }
 @media (max-width: 667px){
 	header{
+	.menu-link, .menu-close{
+		margin-right: 25px;
+	}
 	.logo-box{
 		a{
 			img{
@@ -822,6 +870,9 @@ footer{
 header{
 	.menu-link{
 		display: inline;
+	}
+	.menu-link, .menu-close{
+		margin-right: 25px;
 	}
 	.phone-link{
 		display: inline;
