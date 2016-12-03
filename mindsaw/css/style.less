@@ -155,7 +155,7 @@ header{
 	.logo-box{
 		width: 100%;
 		margin-top: 48px;
-		padding: 38px 20px;
+		padding: 38px 0;
 
   
 		a{	
@@ -400,7 +400,7 @@ main{
 }
 	h3{
 		font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		text-transform: uppercase;
 		text-align: center;
 		font-size: 1.5em;
@@ -533,6 +533,48 @@ main{
 		.wrap{
 			background: #70c0b3;
 			width: 100%;
+			padding: 30px;
+			img{
+				max-width: 200px;
+				float: left;
+				margin-right: 40px;
+				&:after{
+					content: '';
+					display: block;
+					clear: both;
+				}
+			}
+			p{
+
+						
+						font-size: 1.44em;
+						line-height: 1.4em;
+						text-align: center;
+						margin-bottom: 0;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+						color: @text-headers-color;
+						&:before{
+							content: "\201c";
+							display: block;
+							text-align: left;
+							color: #eee;
+							font-family: arial;
+							font-size: 5em;
+							transform: translateY(25px);
+			
+						}
+						&:after{
+							content: "\201d";
+							display: block;
+							color: #eee;
+							text-align: right;
+							font-family: arial;
+							font-size: 5em;
+							transform: translateY(25px);
+						}
+					
+					
+			}
 			/* .box{
 			
 				width: 50%;float: left;
@@ -615,9 +657,10 @@ main{
 		h4{
 			font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
 			text-transform: uppercase;
-			margin: 25px 0;
+			margin-top: 25px;
+			margin-bottom: 15px;
 			color: @text-headers-color;
-			font-size: 1.25em;
+			font-size: 1.5em;
 			font-weight: 600;
 			line-height: 1.4;
 		}
