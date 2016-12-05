@@ -57,9 +57,9 @@ header .nav-bar .sidenav .sidenav .sub-menu{
 	}
 }
 header .nav-bar .sub-menu>li{
-	background: ;
+	background: red;
 	&:last-child{
-		margin-left: 0;
+		margin-left: 30px;
 	}
 }
 header .nav-bar.sidenav .menu-item-has-children:hover .sub-menu li{
@@ -224,7 +224,6 @@ header{
 	}
 	.logo-box{
 		width: 100%;
-		height: 300px;
 		margin-top: 48px;
 		padding: 38px 0;
 
@@ -278,7 +277,7 @@ header{
 					}
 				}
 			.sub-menu{
-				display: block;
+				display: none;
 				background-color: #fff;
 				margin-left: 40px;
 				width: 100%;
@@ -310,7 +309,6 @@ header{
 		}
 	}
 	.nav-bar{
-		margin-top: 75px;
 		text-align: center;
 		font-size: 0.875em;
 		text-transform: uppercase;
@@ -324,9 +322,6 @@ header{
 					color: @nav-text-color;
 					padding: 6px 12px;
 					&:hover{
-						&:last-child{
-							color: @nav-text-color;
-						}
 					color: @nav-text-hover;
 						-webkit-transition: color 0.1s ease-in-out;
 						-moz-transition: color 0.1s ease-in-out;
@@ -598,37 +593,152 @@ main{
     			}
     	}
     } */
-main .testimonials-box{
-	width:100%;padding-top:20px;padding-bottom:25px
-	}
-	main .testimonials-box h3{
-	font-family:"Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;text-transform:uppercase;margin:25px 0;color:#333;font-size:1.5em;font-weight:600;line-height:1.4
-	}
-	main .testimonials-box .wrap{
-	background:#00a8ec url('img/testimonial-bg.jpg') center no-repeat;background-size:cover;width:100%;padding:37px
-	}
-	main .testimonials-box .wrap img{
-	display: block;margin:0 auto;border:3px solid #ffffff;border-radius:50%;max-width:200px;
-	}
-	main .testimonials-box .wrap p{
-	border:3px solid #ffffff; padding:25px 45px; font-size:1.44em;line-height:1.4em;text-align:center;margin-bottom:0;font-family:"Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;color:#ffffff
-	}
-	.testimonials-box .wrap p span{
-display: block; padding-top: 10px; font-size: .9em;
-}
-/* main .testimonials-box .wrap p:before{
-content:"\0022";display:inline;color:#eee;font-family:arial;font-size:5em;transform:translateY(25px)
-}
-main .testimonials-box .wrap p:after{
-	content:"\201d";display:block;color:#eee;text-align:right;font-family:arial;font-size:5em;margin-right:-5px;transform:translateY(25px)
-	}
-	 */main .testimonials-box .wrap a{
-	display:block; text-decoration: none; font-family:"Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;color:#eee;font-style:italic;text-align:left;font-size:1.2em
-	}
-	main .testimonials-box .wrap:after{
-	content:"";display:block;clear:both
-	}
+	.testimonials-box{
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 25px;
+		h3{
+			font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+			text-transform: uppercase;
+			margin: 25px 0;
+			color: @text-headers-color;
+			font-size: 1.5em;
+			font-weight: 600;
+			line-height: 1.4;
+		}
+		.wrap{
+			background: #70c0b3;
+			width: 100%;
+			padding: 30px;
+			img{
+				max-width: 200px;
+				float: left;
+				margin-right: 40px;
+				&:after{
+					content: '';
+					display: block;
+					clear: both;
+				}
+			}
+			p{
 
+						
+						font-size: 1.44em;
+						line-height: 1.4em;
+						text-align: center;
+						margin-bottom: 0;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+						color: @text-headers-color;
+						&:before{
+							content: "\201c";
+							display: block;
+							text-align: left;
+							color: #eee;
+							font-family: arial;
+							font-size: 5em;
+							transform: translateY(25px);
+			
+						}
+						&:after{
+							content: "\201d";
+							display: block;
+							color: #eee;
+							text-align: right;
+							font-family: arial;
+							font-size: 5em;
+							margin-right: -5px;
+							transform: translateY(25px);
+						}
+					
+					
+			}
+			span{
+				display: block;
+				font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+				color: #eee;
+				font-style: italic;
+				text-align: left;
+				font-size:1.2em;
+
+			}
+			/* .box{
+			
+				width: 50%;float: left;
+				.left{
+					position: relative;
+					width: 100%;
+					background: #eee url('../img/Grocery-.jpg') center no-repeat;
+					-webkit-background-size: cover;
+					background-size: cover;
+					padding: 40% 20%;
+					h2{		
+						background: rgba(112, 192, 179, .75);
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+						text-transform: uppercase;
+						color: #eee;
+						font-size: 1.7em;
+						font-weight: 600;
+						line-height: 1.4;
+						padding: 0;							
+					}
+				}
+			
+				.right{
+					height: 100%;
+					padding: 10% 10%;
+					p{
+						display: block;
+						font-size: 1.44em;
+						line-height: 1.4em;
+						text-align: center;
+						margin-bottom: 0;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+			
+						color: @text-headers-color;
+						&:before{
+							content: "\201c";
+							display: block;
+							text-align: left;
+							color: #eee;
+							font-family: arial;
+							font-size: 5em;
+			
+						}
+						&:after{
+							content: "\201d";
+							display: block;
+							color: #eee;
+							text-align: right;
+							padding-top: .5em;
+							font-family: arial;
+							font-size: 5em;
+							padding-top: 20px;
+						}
+					}
+					span{
+						display: block;
+						font-size: 1.3em;
+						line-height: 1.1em;
+						text-align: left;
+						color: @text-headers-color;
+						padding-top: 10px;
+						font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+							font-style: italic;
+						}
+						img{
+							padding-top: 15px;
+							max-width: 250px;
+							height: auto;
+						}
+				}
+			} */
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}			
+		}
+	}
 	.portfolio{
 
 		h4{
@@ -748,129 +858,7 @@ main .testimonials-box .wrap p:after{
 			cursor: pointer;
 		}
 	}
-	.product{
-		img.character{
-			margin-left: 40px;
-			max-width: 90px;
-			display: inline;
-		}
-		img.logo{
-			width: 260px;
-		}
-		h1,h2,h3,h5,h6{
-			font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
-
-		}
-
-		h5{
-			display: inline-block;
-			text-align: left;
-			line-height: 35px;
-			text-transform: uppercase;
-			padding: 5px 10px;
-			color:  #f29109;
-			font-size: 1.25em;
-			font-weight: 600;
-			span{
-				font-size: 0.7em;
-			}	
-		}
-		h1{
-			color: @text-headers-color;
-			font-size: 2.25em;
-			font-weight: 400;
-			text-transform: uppercase;
-			margin-bottom: 0;
-			margin-top: 20px;
-			}
-		h2{
-			color: @text-headers-color;
-			font-size: 1.9em;
-			font-weight: 800px;
-			text-transform: uppercase;
-			margin-bottom: 0;
-			margin-top: ;
-		}
-		h4{
-			color: @nav-text-color;
-			padding: 15px 40px;
-			line-height: 1.4em;
-			font-size: 1.3em;
-			text-align: center;
-			text-transform: uppercase;
-			font-weight: 600;
-			font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-		}
-		&-photo{
-			display: block;
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-
-		}
-		p.head-text{
-			font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-			color:#4f4f4f;
-			padding: 10px 70px;
-			line-height: 33px;
-			font-size: 20px;
-			font-weight: 400;
-			text-align: center;
-			border-right: 3px solid #ddd;
-			margin-bottom: 40px;
-			span{
-				display: inline-block;
-				color: @text-headers-color;
-			font-size: 2.75em;
-			font-weight: 800;
-			/* font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif; */
-			
-			text-transform: uppercase;
-			margin-bottom: 0;
-			margin-top: 40px;
-			}
-		}
-		p{
-			font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-			color:#4f4f4f;
-			padding: 0 40px;
-			line-height: 1.35em;
-			font-size: 0.9em;
-			text-align: center;
- }
-		a.button{
-		    text-decoration: none;
-		    text-align: center;
-		    text-transform: uppercase;
-		    display: block;
-		    width: 170px;
-		    height: 50px;
-		    background: linear-gradient(to top,#f29109,#f9ad25);
-		    color: #fff;
-		    margin:35px auto;
-		    line-height: 50px;
-		    border-radius: 5px;
-		    font-size: 1.3em;
-		    font-family: "Open Sans Condensed",TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
-		    font-weight: 600;
-		    box-shadow: 0 0 10px rgba(0,0,0,.5);
-		    }
-		.vertical-align {
-    display: flex;
-    align-items: center;
-}
-		.row{
-			
-			/* margin-bottom: 30px; */
-		}
-		.pl0{
-			padding-left: 0;
-		}
-		.pr0{
-			padding-right: 0;
-		}
-	}
+	
 
 }
 footer{
@@ -971,13 +959,12 @@ footer{
 						}
 					} 
 					&:last-child{
-						margin-left: 0;
+						margin-left: 10px;
 					}
 				}
 			}
 		}
 	}
-
 }
 @media (max-width: 667px){
 	header{

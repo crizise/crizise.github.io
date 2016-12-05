@@ -327,10 +327,9 @@
 						
 						<div class="social-buttons">
 						<ul>
-                            <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 							<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+							<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						</ul>	
 						</div> 
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48459.78978379068!2d-74.184573!3d40.613629!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcdacbc54096b9979!2sMindsaw!5e0!3m2!1sru!2sus!4v1480626226687" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -369,7 +368,9 @@
 
 		  $('#menuToogle').bind('click', function() {
 		  		$('.nav-bar').addClass('sidenav');
-		  		$('.sidenav').css('width', sideNavWidth + '%');
+		  		$('.sidenav').css({
+                    width: sideNavWidth + '%',
+                });
 		  		$('.nav-bar').css('display','block');
 		  		$(this).css('display', 'none');
 		  		$('.menu-close').css('display', 'inline');
@@ -444,27 +445,3 @@
 </script>
 </body>
 </html>
-<main>
- <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">
-            
-        </div>
-        <div class="col-md-6">
-            <h1>Web design</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores cumque, odio eaque, sapiente repudiandae iste laudantium sunt, hic alias facilis molestias aperiam aliquam vel ipsum esse dolore fugiat quae.</p>
-        </div>
-    </div>
-</div>   
-</main>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">
-            
-        </div>
-        <div class="col-md-6">
-            <h1>Web design</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores cumque, odio eaque, sapiente repudiandae iste laudantium sunt, hic alias facilis molestias aperiam aliquam vel ipsum esse dolore fugiat quae.</p>
-        </div>
-    </div>
-</div>
