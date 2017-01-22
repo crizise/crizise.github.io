@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rotate</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/turntable.min.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/turntable.min.js"></script>
+	<style>
+		.turntable{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+					<div id="myTurntable" class="turntable">
+					<ul>
+					<li data-img-src="img/0_0.jpg"></li>
+						<li data-img-src="img/0_1.jpg"></li>
+						<li data-img-src="img/0_2.jpg"></li>
+						<li data-img-src="img/0_3.jpg"></li>
+						<li data-img-src="img/0_4.jpg"></li>
+						<li data-img-src="img/0_5.jpg"></li>
+						<li data-img-src="img/0_6.jpg"></li>
+						<li data-img-src="img/0_7.jpg"></li>
+						<li data-img-src="img/0_8.jpg"></li>
+						<li data-img-src="img/0_9.jpg"></li>
+					</ul>
+				</div>
+	<script type="text/javascript">
+		$('#myTurntable').turntable();
+	</script>
+</body>
+</html>
