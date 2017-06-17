@@ -10,59 +10,20 @@
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 		.wrap{
-			background: tomato;
-			padding: 25% 0;
+			height: 100vh;
+			background: #131927 url('img/bg_pattern.png') repeat;
 		}
 	</style>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mb.YTPlayer.min.js"></script>
 </head>
 <body>
-	<div class="wrap">
-		<h1>Comming Soon</h1>
+	<div class="wrap" data-property="{videoURL:'https://youtu.be/a-11dtG7aK4',containment:'.wrap',autoPlay:true, mute:true, startAt:0, opacity:1}">
 	</div>
-	<!-- <div class="placeholder">
-		<h1>There will be my portfolio.</h1>
-		<h4>But <span>here</span> you can see my last project.</h4>
-		<div class="rack">
-			<a href="https://goo.gl/2NG88k" target="_blank"><img src="img/burger.png" alt="burger"></a>
-		</div>
-		<div class="contact">
-			<ul>
-				<li>
-					<a href="mailto:kolomitsev@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-				</li>
-				<li>
-					<a href="https://goo.gl/3HgV1x" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-				</li>
-				<li>
-					<a href="https://goo.gl/3GHFcF" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-				</li>
-			</ul>
-			
-			
-	
-		</div>
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$('span').on('click', function() {
-				$('.rack').toggle(1000, function(){
-					$(this).animate({
-						top:'80px',
-						width:'280px',
-						height:'250px'
-					});
-					$('h1').toggle(1000, function() {
-						$(this).animate({
-							top:'4%',
-							left:'33.3%',
-						transform:'translate(33.3%,0)'
-						});
-					});
-				});
-			});
-			
+	<script>
+		jQuery(document).ready(function($) {
+			$('.wrap').YTPlayer();	
 		});
-	</script> -->
+	</script>
 </body>
 </html>
